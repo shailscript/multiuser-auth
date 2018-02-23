@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PagesController@getIndex');
+
+Route::get('vendorlogin', 'PagesController@getVendor');
 
 
 Route::group(['prefix' => 'admin'], function () {
